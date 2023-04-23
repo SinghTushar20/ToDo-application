@@ -1,0 +1,25 @@
+<div id="<%= dom_id task %>", class = "each-task same-line">
+    <div>
+      <strong><%= task.title %></strong>
+      <p class = "border">
+        <%= link_to "Task Info", task, class: "links" %>
+      </p>
+    </div>
+    <div>
+      <%if task.completed%>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value= "" id="flexCheckIndeterminate" checked>
+          <label class="form-check-label" for="flexCheckIndeterminate">
+            Completed
+          </label>
+        </div>
+      <%else%>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value= "" id="flexCheckIndeterminate">
+          <label class="form-check-label" for="flexCheckIndeterminate">
+          Completed
+          </label>
+        </div>
+      <%end%>
+    </div>
+</div>
